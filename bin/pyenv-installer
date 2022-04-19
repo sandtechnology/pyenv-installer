@@ -37,11 +37,9 @@ if ! command -v git 1>/dev/null 2>&1; then
   exit 1
 fi
 
-if [ -n "${USE_GIT_URI}" ]; then
-  GITHUB="git://github.com"
-else
-  GITHUB="https://github.com"
-fi
+
+GITHUB="https://hub.fastgit.xyz"
+
 
 checkout "${GITHUB}/pyenv/pyenv.git"            "${PYENV_ROOT}"
 checkout "${GITHUB}/pyenv/pyenv-doctor.git"     "${PYENV_ROOT}/plugins/pyenv-doctor"
